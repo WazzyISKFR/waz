@@ -15,6 +15,7 @@ body {
 }
 
 .card1 {
+    transition: transform 0.5s ease;
     box-shadow: 0px 0px 3px #f9f9f9bf;
     padding: 3px;
     background-color: #3a3b3a94;
@@ -26,7 +27,28 @@ body {
     text-align: center;
 }
 
+.card1:hover{
+    transform: scale(1.05);
+}
+
+.card1:hover .modernefx{
+
+    color:#f2c15f;
+    filter:
+        drop-shadow( 0px 0px 50px #f3c95c)
+        drop-shadow( 0px 0px 15px #fe8c00);
+}
+
 .modernefx{
+    position: relative;
+    top: 0px;
+    transition: filter 0.5s ease, color 0.5s ease, top 0.5s ease;
     color: #fbf9f9;
-    filter:drop-shadow( 0px 0px 13px #fbf9f9)
+    filter:drop-shadow( 0px 0px 13px #fbf9f9);
+}
+
+
+.modernefx.clicked{
+    
+    top: 500px;
 }
